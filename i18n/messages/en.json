@@ -1,0 +1,61 @@
+{
+  "common": {
+    "appName": "Simulacro",
+    "language": "Language",
+    "back": "Back"
+  },
+  "home": {
+    "title": "Welcome",
+    "description": "Sample application. Theme and language are correctly configured.",
+    "greeting": "Hello, world"
+  },
+  "catalog": {
+    "title": "Catalog",
+    "empty": "No products available."
+  },
+  "product": {
+    "price": "Price",
+    "stock": "{count} in stock",
+    "outOfStock": "Out of stock",
+    "description": "Description",
+    "specifications": "Specifications",
+    "notFound": "Product not found.",
+    "saveFavorite": "Save to favorites",
+    "removeFavorite": "Remove from favorites",
+    "addToCart": "Add to cart",
+    "buy": "Buy"
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty.",
+    "total": "Total",
+    "checkout": "Place order",
+    "remove": "Remove"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "empty": "You have no favorite products yet."
+  },
+  "auth": {
+    "login": "Sign in",
+    "logout": "Sign out",
+    "register": "Sign up",
+    "loginTitle": "Sign in",
+    "registerTitle": "Create account",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Continue",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginRequired": "Sign in to continue",
+    "errors": {
+      "name_short": "Name must be at least 2 characters.",
+      "email_invalid": "Enter a valid email.",
+      "password_short": "Password must be at least 6 characters.",
+      "email_taken": "This email is already registered.",
+      "invalid_credentials": "Incorrect email or password.",
+      "fields_required": "Please fill in all fields."
+    }
+  }
+}

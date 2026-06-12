@@ -1,0 +1,61 @@
+{
+  "common": {
+    "appName": "Simulacro",
+    "language": "Idioma",
+    "back": "Voltar"
+  },
+  "home": {
+    "title": "Bem-vindo",
+    "description": "Aplicação de exemplo. O tema e o idioma estão corretamente configurados.",
+    "greeting": "Olá, mundo"
+  },
+  "catalog": {
+    "title": "Catálogo",
+    "empty": "Nenhum produto disponível."
+  },
+  "product": {
+    "price": "Preço",
+    "stock": "{count} em estoque",
+    "outOfStock": "Sem estoque",
+    "description": "Descrição",
+    "specifications": "Especificações",
+    "notFound": "Produto não encontrado.",
+    "saveFavorite": "Salvar nos favoritos",
+    "removeFavorite": "Remover dos favoritos",
+    "addToCart": "Adicionar ao carrinho",
+    "buy": "Comprar"
+  },
+  "cart": {
+    "title": "Carrinho",
+    "empty": "Seu carrinho está vazio.",
+    "total": "Total",
+    "checkout": "Finalizar compra",
+    "remove": "Remover"
+  },
+  "favorites": {
+    "title": "Favoritos",
+    "empty": "Você ainda não tem produtos favoritos."
+  },
+  "auth": {
+    "login": "Entrar",
+    "logout": "Sair",
+    "register": "Cadastrar",
+    "loginTitle": "Entrar",
+    "registerTitle": "Criar conta",
+    "name": "Nome",
+    "email": "E-mail",
+    "password": "Senha",
+    "submit": "Continuar",
+    "noAccount": "Não tem uma conta?",
+    "hasAccount": "Já tem uma conta?",
+    "loginRequired": "Entre para continuar",
+    "errors": {
+      "name_short": "O nome deve ter pelo menos 2 caracteres.",
+      "email_invalid": "Digite um e-mail válido.",
+      "password_short": "A senha deve ter pelo menos 6 caracteres.",
+      "email_taken": "Este e-mail já está cadastrado.",
+      "invalid_credentials": "E-mail ou senha incorretos.",
+      "fields_required": "Preencha todos os campos."
+    }
+  }
+}

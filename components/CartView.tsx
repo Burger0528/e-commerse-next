@@ -110,7 +110,7 @@ export default function CartView({ items }: CartViewProps) {
                   {item.product.name}
                 </Typography>
                 <Typography variant="caption" sx={{ color: "text.secondary" }}>
-                  ${item.product.price.toFixed(2)} / u
+                  ${item.product.price.toFixed(2)} {t("cart.perUnit")}
                 </Typography>
               </Box>
 

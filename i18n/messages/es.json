@@ -30,7 +30,8 @@
     "empty": "Tu carrito está vacío.",
     "total": "Total",
     "checkout": "Realizar compra",
-    "remove": "Eliminar"
+    "remove": "Eliminar",
+    "perUnit": "c/u"
   },
   "favorites": {
     "title": "Favoritos",

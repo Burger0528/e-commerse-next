@@ -30,7 +30,8 @@
     "empty": "Your cart is empty.",
     "total": "Total",
     "checkout": "Place order",
-    "remove": "Remove"
+    "remove": "Remove",
+    "perUnit": "each"
   },
   "favorites": {
     "title": "Favorites",

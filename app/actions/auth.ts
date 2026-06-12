@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/session";
 import { registerUser, loginUser } from "@/services/authService";
+import { sendWelcomeEmail } from "@/lib/email";
 
 export type ActionState = {
   error?: string;
@@ -29,6 +30,10 @@ export async function registerAction(
   session.name = result.user.name;
   session.email = result.user.email;
   await session.save();
+
+  await sendWelcomeEmail(result.user.name, result.user.email).catch((e) =>
+    console.error("[email] Welcome email failed:", e)
+  );
 
   redirect(`/${locale}`);
 }

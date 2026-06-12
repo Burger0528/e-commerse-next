@@ -1,7 +1,5 @@
-import { MongoClient } from "mongodb";
-import type { ProductDocument } from "./types";
-
-const uri = process.env.MONGODB_URI ?? "mongodb://localhost:27017/simulacro";
+import { getDb, closeDb } from "@/lib/mongodb";
+import type { ProductDocument } from "@/lib/types";
 
 const products: Omit<ProductDocument, "_id">[] = [
   {
@@ -110,35 +108,27 @@ const products: Omit<ProductDocument, "_id">[] = [
 ];
 
 async function seed() {
-  const client = new MongoClient(uri);
-  try {
-    await client.connect();
-    const db = client.db();
+  const db = await getDb();
 
-    // Ensure collections exist (createCollection is idempotent)
-    const existingCollections = (await db.listCollections().toArray()).map(
-      (c) => c.name
-    );
-    for (const name of ["users", "products", "cart", "favorites", "sales"]) {
-      if (!existingCollections.includes(name)) {
-        await db.createCollection(name);
-        console.log(`Created collection: ${name}`);
-      }
+  const existingCollections = (await db.listCollections().toArray()).map((c) => c.name);
+  for (const name of ["users", "products", "cart", "favorites", "sales"]) {
+    if (!existingCollections.includes(name)) {
+      await db.createCollection(name);
+      console.log(`Created collection: ${name}`);
     }
-
-    // Clear and re-seed products
-    const col = db.collection<Omit<ProductDocument, "_id">>("products");
-    await col.deleteMany({});
-    const result = await col.insertMany(products);
-    console.log(`Inserted ${result.insertedCount} products.`);
-
-    console.log("Seed complete.");
-  } finally {
-    await client.close();
   }
+
+  const col = db.collection<Omit<ProductDocument, "_id">>("products");
+  await col.deleteMany({});
+  const result = await col.insertMany(products);
+  console.log(`Inserted ${result.insertedCount} products.`);
+
+  console.log("Seed complete.");
 }
 
-seed().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+seed()
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  })
+  .finally(() => closeDb());

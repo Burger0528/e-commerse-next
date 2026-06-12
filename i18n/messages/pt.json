@@ -4,11 +4,6 @@
     "language": "Idioma",
     "back": "Voltar"
   },
-  "home": {
-    "title": "Bem-vindo",
-    "description": "Aplicação de exemplo. O tema e o idioma estão corretamente configurados.",
-    "greeting": "Olá, mundo"
-  },
   "catalog": {
     "title": "Catálogo",
     "empty": "Nenhum produto disponível."

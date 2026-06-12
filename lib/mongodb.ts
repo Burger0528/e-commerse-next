@@ -26,3 +26,7 @@ export async function getDb(): Promise<Db> {
   await client.connect();
   return client.db();
 }
+
+export async function closeDb(): Promise<void> {
+  await client.close();
+}

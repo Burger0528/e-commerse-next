@@ -9,8 +9,8 @@ export async function register() {
   }
 
   const cron = await import("node-cron");
-  const { getCurrentMonthReport } = await import("./services/salesReportService");
-  const { sendSalesReportEmail } = await import("./lib/email");
+  const { getCurrentMonthReport } = await import("@/services/salesReportService");
+  const { sendSalesReportEmail } = await import("@/lib/email");
 
   // Runs every day at 09:00 server time
   cron.default.schedule("0 9 * * *", async () => {

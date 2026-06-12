@@ -4,11 +4,6 @@
     "language": "Language",
     "back": "Back"
   },
-  "home": {
-    "title": "Welcome",
-    "description": "Sample application. Theme and language are correctly configured.",
-    "greeting": "Hello, world"
-  },
   "catalog": {
     "title": "Catalog",
     "empty": "No products available."
